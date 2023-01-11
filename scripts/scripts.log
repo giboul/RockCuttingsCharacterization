@@ -1,0 +1,129 @@
+WARNING 2023-01-08 19:29:54,119 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-08 19:30:13,939 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-08 19:30:36,339 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-08 19:33:44,961 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-08 19:34:12,511 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-08 22:41:51,753 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\config/MAR_RESNET34_CROPPED_256_new.yaml'
+INFO    2023-01-08 22:42:00,874 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET34_CROPPED_256_new.yaml'
+INFO    2023-01-08 22:42:02,363 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new'
+INFO    2023-01-08 22:42:02,370 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new\model_0.pt'
+INFO    2023-01-08 22:42:29,165 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET34_CROPPED_256_new.yaml'
+INFO    2023-01-08 22:42:30,178 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new'
+INFO    2023-01-08 22:42:30,180 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new\model_0.pt'
+INFO    2023-01-08 22:42:30,839 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-08 22:44:28,799 | (Utils.py:55 ) Running on cpu, not on CUDA
+WARNING 2023-01-08 22:44:28,813 | (Utils.py:55 ) Running on cpu, not on CUDA
+INFO    2023-01-08 22:44:29,277 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\debugconfig.yaml'
+INFO    2023-01-08 22:44:29,888 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\debugmodel'
+INFO    2023-01-08 22:44:29,890 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\debugmodel\model_0.pt'
+INFO    2023-01-08 22:44:29,912 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\debug/debug.csv'
+WARNING 2023-01-08 22:44:29,913 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-08 22:44:43,399 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\RN34_CROPPED_256_borehole.yaml'
+INFO    2023-01-08 22:44:44,064 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_borehole_train'
+INFO    2023-01-08 22:44:44,065 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_borehole_train\model_0.pt'
+INFO    2023-01-08 22:44:44,140 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\borehole/test0.csv'
+WARNING 2023-01-08 22:44:44,141 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-08 22:51:15,133 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_borehole_train\model_1.pt'
+INFO    2023-01-08 22:51:15,252 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\borehole/test1.csv'
+WARNING 2023-01-08 22:51:15,253 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-08 22:58:07,960 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_borehole_train\model_2.pt'
+INFO    2023-01-08 22:58:08,023 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\borehole/test2.csv'
+WARNING 2023-01-08 22:58:08,025 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-08 23:04:53,723 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET34_CROPPED_256_new.yaml'
+INFO    2023-01-08 23:04:55,075 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new'
+INFO    2023-01-08 23:04:55,077 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new\model_0.pt'
+INFO    2023-01-08 23:04:55,676 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-08 23:04:55,678 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-09 00:46:26,903 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET34_CROPPED_256_new.yaml'
+INFO    2023-01-09 00:46:27,440 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new'
+INFO    2023-01-09 00:46:27,441 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_new\model_0.pt'
+INFO    2023-01-09 00:46:27,812 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 00:46:27,814 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-09 12:05:25,677 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole_train.yaml'
+INFO    2023-01-09 12:05:26,825 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\Models/outputs/MAR_RESNET18_PADDED_256_lab_train'
+INFO    2023-01-09 12:05:26,837 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\Models/outputs/MAR_RESNET18_PADDED_256_lab_train\model_0.pt'
+INFO    2023-01-09 12:05:27,514 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+ERROR   2023-01-09 12:05:27,528 | (test.py:85 ) C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\Models/outputs/MAR_RESNET18_PADDED_256_lab_train\model_0.pt is not a file
+INFO    2023-01-09 12:06:15,081 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole_train.yaml'
+INFO    2023-01-09 12:06:15,511 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 12:06:15,512 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 12:06:16,063 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 12:06:16,065 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-09 12:07:20,571 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole_train.yaml'
+INFO    2023-01-09 12:07:20,898 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 12:07:20,899 | (test.py:56 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 12:07:21,844 | (test.py:60 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 12:07:21,845 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-09 14:04:10,328 | (Utils.py:55 ) Running on cpu, not on CUDA
+WARNING 2023-01-09 14:04:10,340 | (Utils.py:55 ) Running on cpu, not on CUDA
+INFO    2023-01-09 14:16:32,930 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole_train.yaml'
+INFO    2023-01-09 14:16:33,265 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 14:16:33,266 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 14:16:34,416 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 14:16:34,418 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-09 14:16:56,401 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole_train.yaml'
+INFO    2023-01-09 14:16:56,806 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 14:16:56,808 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 14:16:57,440 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 14:16:57,442 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-09 14:17:22,776 | (Utils.py:55 ) Running on cpu, not on CUDA
+WARNING 2023-01-09 14:17:22,777 | (Utils.py:55 ) Running on cpu, not on CUDA
+INFO    2023-01-09 14:17:35,262 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole_train.yaml'
+INFO    2023-01-09 14:17:35,633 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 14:17:35,634 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 14:17:36,522 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 14:17:36,524 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-09 18:32:46,128 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole-lab.yaml'
+INFO    2023-01-09 18:32:46,661 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 18:32:46,663 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 18:32:47,628 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 18:32:47,645 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-09 21:02:54,603 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole-borehole.yaml'
+INFO    2023-01-09 21:03:44,961 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256-lab_borehole-borehole.yaml'
+INFO    2023-01-09 21:04:29,049 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256-lab_borehole-borehole.yaml'
+INFO    2023-01-09 21:04:39,667 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole-borehole.yaml'
+INFO    2023-01-09 21:04:40,255 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 21:04:40,257 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 21:04:41,095 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/Borehole.csv'
+WARNING 2023-01-09 21:04:41,097 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-09 23:55:15,947 | (Utils.py:55 ) Running on cpu, not on CUDA
+WARNING 2023-01-09 23:55:15,961 | (Utils.py:55 ) Running on cpu, not on CUDA
+INFO    2023-01-09 23:55:20,425 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole-lab_borehole.yaml'
+INFO    2023-01-09 23:55:20,790 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-09 23:55:20,791 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-09 23:55:21,405 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new-borehole.csv'
+WARNING 2023-01-09 23:55:21,406 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-10 01:07:02,331 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole-lab.yaml'
+INFO    2023-01-10 01:07:03,252 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-10 01:07:03,253 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-10 01:07:03,675 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new.csv'
+WARNING 2023-01-10 01:07:03,682 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-10 01:27:19,388 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_lab_borehole-borehole.yaml'
+INFO    2023-01-10 01:27:19,694 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train'
+INFO    2023-01-10 01:27:19,695 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_lab_borehole_train\model_0.pt'
+INFO    2023-01-10 01:27:19,987 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/Borehole.csv'
+WARNING 2023-01-10 01:27:19,988 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-10 02:01:39,509 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET34_CROPPED_256_lab_train.yaml'
+INFO    2023-01-10 02:01:39,947 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\Models/outputs/MAR_RESNET34_CROPPED_256_lab_train'
+INFO    2023-01-10 02:01:39,948 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\Models/outputs/MAR_RESNET34_CROPPED_256_lab_train\model_0.pt'
+INFO    2023-01-10 02:01:40,073 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new.csv'
+ERROR   2023-01-10 02:01:40,074 | (test.py:89 ) C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\Models/outputs/MAR_RESNET34_CROPPED_256_lab_train\model_0.pt is not a file
+WARNING 2023-01-10 11:00:20,120 | (Utils.py:55 ) Running on cpu, not on CUDA
+WARNING 2023-01-10 11:00:20,139 | (Utils.py:55 ) Running on cpu, not on CUDA
+INFO    2023-01-10 11:01:07,106 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET34_CROPPED_256_lab_train.yaml'
+INFO    2023-01-10 11:01:07,852 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_lab_train'
+INFO    2023-01-10 11:01:07,853 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_lab_train\model_0.pt'
+INFO    2023-01-10 11:01:08,168 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new.csv'
+WARNING 2023-01-10 11:01:08,170 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-10 11:34:07,078 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\RN34_CROPPED_256_borehole-lab.yaml'
+INFO    2023-01-10 11:34:07,662 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_borehole_train'
+INFO    2023-01-10 11:34:07,664 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET34_CROPPED_256_borehole_train\model_0.pt'
+INFO    2023-01-10 11:34:07,826 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new.csv'
+WARNING 2023-01-10 11:34:07,828 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+INFO    2023-01-10 11:48:32,576 | (Utils.py:85 ) Training on the set: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\MAR_RESNET18_PADDED_256_borehole-lab.yaml'
+INFO    2023-01-10 11:48:33,086 | (test.py:40 ) Path to model is 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_borehole_train'
+INFO    2023-01-10 11:48:33,087 | (test.py:58 ) Test model: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\outputs\MAR_RESNET18_PADDED_256_borehole_train\model_0.pt'
+INFO    2023-01-10 11:48:33,401 | (test.py:62 ) Testing on: 'C:\Users\Axel\Documents\GitHub\Rock-Cuttings-Characterization\config\sets\all/lab_new.csv'
+WARNING 2023-01-10 11:48:33,403 | (BaseModel.py:93 ) Running on cpu, not on CUDA
+WARNING 2023-01-11 13:31:42,444 | (Utils.py:55 ) Running on cpu, not on CUDA
+WARNING 2023-01-11 13:31:42,460 | (Utils.py:55 ) Running on cpu, not on CUDA
