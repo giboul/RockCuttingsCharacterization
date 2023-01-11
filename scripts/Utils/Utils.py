@@ -13,6 +13,7 @@ for _ in range(3):
     # project's folder
     project_path = dirname(project_path)
 
+
 def path_to(*path: str):
     """
     Takes a relative path in the project as a single string
@@ -66,19 +67,21 @@ def load_args(input_file=''):
 
     if not input_file:
         nargs = len(argv)
-        if nargs==2:
+        if nargs == 2:
             _, input_file = argv
-        elif nargs>2:
+        elif nargs > 2:
             print(argv)
             raise FileNotFoundError(
                 f'Give at most one argument to this script '
                 f'default: debug files. '
-                f'If run from a notebook, pass input_file="..." argument to load_args()'
+                f'If run from a notebook, pass input_file="..." '
+                f'argument to load_args()'
             )
 
     if not input_file:
-        logger.warning("input config file option not given, running on debug set")
-        # ifile = path_to('config', 'MAR_RESNET34_CROPPED_256_debug_train.yaml')
+        logger.warning(
+            "input config file option not given, running on debug set"
+        )
         input_file = path_to('config', 'debugconfig.yaml')
     else:
         input_file = path_to('config', input_file)
@@ -86,7 +89,7 @@ def load_args(input_file=''):
 
     if not isfile(input_file):
         raise FileNotFoundError(f"'{input_file}' is not an existing file")
-    
+
     return input_file
 
 

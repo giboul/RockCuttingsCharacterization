@@ -12,6 +12,7 @@ import logging
 logger = logging.getLogger()
 device = set_device()
 
+
 def load_arguments(
     ifolder=path_to('data', 'Raw'),
     ofolder=path_to('data', 'New')

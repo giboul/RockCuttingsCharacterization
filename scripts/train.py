@@ -8,7 +8,7 @@ from Utils.AttrDict import load_config
 from Utils.Dataloader import Transforms, Dataset, dict_transform
 from Utils.BaseModel import Classifier
 from Utils.ResNet import resnet
-from Utils.Utils import set_seed, set_device, TransformTestItems, path_to, load_args
+from Utils.Utils import *
 import logging
 
 logger = logging.getLogger()

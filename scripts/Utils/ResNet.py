@@ -1,43 +1,46 @@
 import torch
 import torch.nn as nn
 
+
 def resnet(layers=(2, 2, 2, 2), channels=3, num_classes=1000):
     # ResNet18 layers: (2, 2, 2, 2)
     # ResNet34 layers: (3, 4, 6, 3)
     """ This function simplifies the resnet object creation by
     setting the BasicBlock argument as default """
-    model = ResNet(BasicBlock, layers, channels=channels, num_classes=num_classes)
+    model = ResNet(BasicBlock, layers, channels=channels,
+                   num_classes=num_classes)
     return model
+
 
 class ResNet(nn.Module):
 
     def __repr__(self) -> str:
         return super().__repr__()
 
-    def __init__(self, block, layers, channels: int=3, num_classes: int=1000):
+    def __init__(self, block, layers,
+                 channels: int = 3, num_classes: int = 1000):
         super().__init__()
-        
+
         self.inplanes = 64
         self.channels = channels
 
-        self.conv1 = nn.Conv2d(self.channels, self.inplanes, kernel_size=7, stride=2, padding=3,
-                               bias=False)
+        self.conv1 = nn.Conv2d(self.channels, self.inplanes,
+                               kernel_size=7, stride=2, padding=3, bias=False)
         self.bn1 = nn.BatchNorm2d(self.inplanes)
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
-        
+
         self.layer1 = self._make_layer(block, 64, layers[0])
         self.layer2 = self._make_layer(block, 128, layers[1], stride=2)
         self.layer3 = self._make_layer(block, 256, layers[2], stride=2)
         self.layer4 = self._make_layer(block, 512, layers[3], stride=2)
-        
-        self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
-        self.fc = nn.Linear(512 , num_classes)
 
+        self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
+        self.fc = nn.Linear(512, num_classes)
 
     def _make_layer(self, block, planes, blocks, stride=1):
-        downsample = None  
-   
+        downsample = None
+
         if stride != 1 or self.inplanes != planes:
             downsample = nn.Sequential(
                 nn.Conv2d(self.inplanes, planes, 1, stride, bias=False),
@@ -46,15 +49,14 @@ class ResNet(nn.Module):
 
         layers = []
         layers.append(block(self.inplanes, planes, stride, downsample))
-        
+
         self.inplanes = planes
-        
+
         for _ in range(1, blocks):
             layers.append(block(self.inplanes, planes))
 
         return nn.Sequential(*layers)
-    
-    
+
     def forward(self, x):
         x = self.conv1(x)           # 224x224
         x = self.bn1(x)
@@ -67,20 +69,22 @@ class ResNet(nn.Module):
         x = self.layer4(x)          # 7x7
 
         x = self.avgpool(x)         # 1x1
-        x = torch.flatten(x, 1)     # remove 1 X 1 grid and make vector of tensor shape 
+        # remove 1 X 1 grid and make vector of tensor shape
+        x = torch.flatten(x, 1)
         x = self.fc(x)
 
         return x
+
 
 class BasicBlock(nn.Module):
     def __init__(self, inplanes, planes, stride=1, downsample=None):
         super().__init__()
         self.conv1 = nn.Conv2d(inplanes, planes, kernel_size=3, stride=stride,
-                     padding=1, bias=False)
+                               padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(planes)
         self.relu = nn.ReLU(inplace=True)
         self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=1,
-                     padding=1, bias=False)
+                               padding=1, bias=False)
         self.bn2 = nn.BatchNorm2d(planes)
         self.downsample = downsample
         self.stride = stride

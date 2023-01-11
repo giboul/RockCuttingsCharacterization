@@ -100,26 +100,46 @@ class BaseModelSingle(BaseModel):
                  print_progress: bool = True,
                  device: str = 'cuda:0', **kwargs):
         """
-        Abtract class defining a moodel based on Pytorch. It allows to save/load the model and train/evaluate it.
-        Classes inheriting from the BaseModel needs to be initialized with a nn.Modules. This network can be trained using
-        the passed optimizer/lr_scheduler with the self.train() methods. To be used, the children class must define two
+        Abstract class defining a moodel based on Pytorch.
+        It allows to save/load the model and train/evaluate it.
+        Classes inheriting from the BaseModel needs to be
+         initialized with a nn.Modules.
+        This network can be trained using the passed optimizer/lr_scheduler
+         with the self.train() methods.
+        To be used, the children class must define two
         abstract methods:
-            1. `forward_loss(data: Tuple[Tensor])` : define the processing of 1 batch provided by the DataLoader. `data`
-               is the tuple of tensors given by the DataLoader. This method should thus define how the data is i) unpacked
-               ii) how the forward pass with self.net is done iii) and how the loss is computed. The method should then
+            1. `forward_loss(data: Tuple[Tensor])`:
+                define the processing of 1 batch provided by the DataLoader.
+                `data` is the tuple of tensors given by the DataLoader.
+                This method should thus define how the data is
+                    i) unpacked
+                    ii) how the forward pass with self.net is done
+                    iii) and how the loss is computed. The method should then
                return the loss.
-            2. `validate(loader: DataLoader)` : define how the model is validated at each epoch. It takes a DataLoader
-               for the validation data as input and should return a dictionnary of properties to print in the epoch
-               summary (as {property_name : str_property_value}). No validation is performed if no valid_loader is passed
-               to self.train()
+            2. `validate(loader: DataLoader)`:
+                define how the model is validated at each epoch.
+                It takes a DataLoader for the validation data as input and
+                 should return a dictionnary of properties to print in the
+                 epoch summary (as {property_name : str_property_value}).
+                 No validation is performed if no valid_loader is passed
+                  to self.train()
 
-        Note: the BaseModel has a dictionnary as attributes (self.outputs) that allow to store some values (training time,
-              validation scores, epoch evolution, etc). This dictionnary can be saved as a YAML file using the save_outputs
-              method. Any other values can be added to the self.outputs using self.outputs["key"] = value.
+        Note: the BaseModel has a dictionnary as attributes (self.outputs)
+               that allow to store some values (training time,
+               validation scores, epoch evolution, etc).
+                This dictionnary can be saved as a YAML file using the
+                 save_outputs method.
+                 Any other values can be added to the
+                  self.outputs using self.outputs["key"] = value.
 
               If Logger is None, the outputs are displayed using `print`.
         """
-        super().__init__(logger=logger, print_progress=print_progress, device=device, **kwargs)
+        super().__init__(
+            logger=logger,
+            print_progress=print_progress,
+            device=device,
+            **kwargs
+        )
 
         self.net = net
         self.net = self.net.to(device)
@@ -129,22 +149,32 @@ class BaseModelSingle(BaseModel):
         self.lr_scheduler = sched
         self.logger = logger
 
-    def train(self, n_epochs: int, train_loader: DataLoader, valid_loader: DataLoader = None,
-              extra_valid_args: List = [], extra_valid_kwargs: Dict = dict(),
-              checkpoint_path: str = None, checkpoint_freq: int = 10,
-              save_best_key: str = None, minimize_metric: bool = True, min_epoch_best: int = 0):
+    def train(self, n_epochs: int, train_loader: DataLoader,
+              valid_loader: DataLoader = None, extra_valid_args: List = [],
+              extra_valid_kwargs: Dict = dict(), checkpoint_path: str = None,
+              checkpoint_freq: int = 10, save_best_key: str = None,
+              minimize_metric: bool = True, min_epoch_best: int = 0):
         """
-        Train the self.net using the optimizer and scheduler using the data provided by the train_loader. At each epoch,
-        the model can be validated using the valid_loader (if a valid loader is provided, the method self.validate must
-        be implemented in the children). The model and training state is loaded/saved in a .pt file if checkpoint_path
-        is provided. The model is then saved every checkpoint_freq epoch.
+        Train the self.net using the optimizer and scheduler using the data
+         provided by the train_loader. At each epoch, the model can be
+         validated using the valid_loader (if a valid loader is provided,
+         the method self.validate must
+          be implemented in the children). The model and training state is
+           loaded/saved in a .pt file if checkpoint_path
+            is provided. The model is then saved every checkpoint_freq epoch.
 
-        The best model can be saved over the training processed based on one of the validation metric provided by the
-        self.validate output dictionnary. The metric to use is specified by the string `save_best_key` and the argument
-        `minimize_metric` define whether the metric must be minimized or maximized. A mininumm number of epoch to be
-        performed before selcting the best model can be specified with 'min_epoch_best'.
+        The best model can be saved over the training processed based on one
+         of the validation metric provided by the self.validate output
+         dictionnary. The metric to use is specified by the string
+         `save_best_key` and the argument `minimize_metric` define whether
+         the metric must be minimized or maximized. A mininumm number of epoch
+         to be performed before selcting the best model can be specified with
+         'min_epoch_best'.
         """
-        assert self.optimizer is not None, "An optimizer must be provided to train the model."
+        if self.optimizer is None:
+            raise ValueError(
+                "An optimizer must be provided to train the model."
+            )
 
         # Load checkpoint if any
         if checkpoint_path:
@@ -170,7 +200,8 @@ class BaseModelSingle(BaseModel):
                     setattr(self, k, checkpoint[k])
 
                 self.print_fn(
-                    f'Resuming from Checkpoint with {n_epoch_finished} epoch finished.')
+                    f'Resuming from Checkpoint with {n_epoch_finished} '
+                    f'epoch finished.')
             except FileNotFoundError:
                 self.print_fn('No Checkpoint found. Training from beginning.')
                 n_epoch_finished = 0
@@ -198,8 +229,12 @@ class BaseModelSingle(BaseModel):
                     if b == 0:
                         train_outputs = {
                             name: 0.0 for name in all_losses.keys()}
-                    train_outputs = {name: (value + all_losses[name].item() if isinstance(
-                        all_losses[name], torch.Tensor) else value + all_losses[name]) for name, value in train_outputs.items()}
+                    train_outputs = {
+                        name: (value + all_losses[name].item()
+                               if isinstance(all_losses[name], torch.Tensor)
+                               else value + all_losses[name])
+                        for name, value in train_outputs.items()
+                    }
                 else:
                     if b == 0:
                         train_outputs = {'Loss': 0.0}
@@ -224,8 +259,14 @@ class BaseModelSingle(BaseModel):
                             if b == 0:
                                 valid_outputs = {
                                     name: 0.0 for name in all_losses.keys()}
-                            valid_outputs = {name: (value + all_losses[name].item() if isinstance(
-                                all_losses[name], torch.Tensor) else value + all_losses[name]) for name, value in valid_outputs.items()}
+                            valid_outputs = {
+                                name: (value + all_losses[name].item()
+                                       if isinstance(
+                                    all_losses[name], torch.Tensor
+                                )
+                                    else value + all_losses[name])
+                                for name, value in valid_outputs.items()
+                            }
                         else:
                             if b == 0:
                                 valid_outputs = {'Valid Loss': 0.0}
@@ -245,9 +286,9 @@ class BaseModelSingle(BaseModel):
                 # Time
                 f"Time {timedelta(seconds=time.time()-epoch_start_time)} | "
                 + "".join([f"{name} {loss_i / train_loader.__len__():.5f} | "
-                        for name, loss_i in train_outputs.items()])  # Train
+                           for name, loss_i in train_outputs.items()])  # Train
                 + "".join([f"{name} {loss_i / valid_loader.__len__():.5f} | "
-                        for name, loss_i in valid_outputs.items()]))  # Validate
+                           for name, loss_i in valid_outputs.items()]))  # Val
 
             epoch_loss_list.append([epoch+1,
                                     {name: loss/train_loader.__len__()
@@ -270,9 +311,13 @@ class BaseModelSingle(BaseModel):
                     best_epoch = epoch+1
                     self.best_net = copy.deepcopy(self.net)
                 # update best net
-                if (minimize_metric and valid_outputs[save_best_key] < best_metric) \
-                        or (not minimize_metric and valid_outputs[save_best_key] > best_metric) \
-                        or epoch < min_epoch_best:
+                if (
+                    minimize_metric and
+                    valid_outputs[save_best_key] < best_metric
+                ) or (
+                        not minimize_metric and
+                        valid_outputs[save_best_key] > best_metric
+                ) or epoch < min_epoch_best:
                     best_metric = valid_outputs[save_best_key]
                     best_epoch = epoch+1
                     self.best_net = copy.deepcopy(self.net)
@@ -315,7 +360,8 @@ class BaseModelSingle(BaseModel):
         specified by map_location.
         """
         device = set_device()
-        loaded_state_dict = torch.load(import_path, map_location=device)  #, on=device)
+        loaded_state_dict = torch.load(
+            import_path, map_location=device)  # , on=device)
         self.net.load_state_dict(loaded_state_dict)
 
 

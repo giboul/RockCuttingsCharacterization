@@ -21,8 +21,9 @@ device = set_device()
 # - Prepare config files for all models to train (*.yaml, *.csv and folder)
 # - Train model (the best one) on whole data
 # - ?: Post Processing : plot mean val acc + std
-# - ?: Post Processing : plot expert prediciton vs. baseline raw vs. cropped vs. mar
-### python train.py -i .\\config\\MAR_RESNET34_CROPPED_256_borehole_train.yaml
+# - ?: Post Processing :
+#       plot expert prediciton vs. baseline raw vs. cropped vs. mar
+# python train.py -i .\\config\\MAR_RESNET34_CROPPED_256_borehole_train.yaml
 
 
 def test(config=""):
@@ -57,7 +58,9 @@ def test(config=""):
         model_path = path_to(path_model, f"model_{i}.pt")
         logger.info(f"Test model: '{model_path}'")
 
-        test_dataframe = pd.read_csv(path_to('config', 'sets',  data_path), index_col=0)
+        test_dataframe = pd.read_csv(
+            path_to('config', 'sets',  data_path), index_col=0
+        )
         test_dataframe.Paths = test_dataframe.Paths.apply(path_to)
         logger.info(f"Testing on: '{path_to('config', 'sets', data_path)}'")
 
@@ -91,6 +94,6 @@ def test(config=""):
     return valid_outputs, losses, predictions, labels
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     acc, loss = test(config="debugconfig.yaml")
     print(acc, loss)

@@ -1,11 +1,7 @@
 import numpy as np
 import cv2  # pip install opencv-python
 import matplotlib.pyplot as plt
-from skimage.morphology import disk, erosion, dilation, closing  # pip install scikit-image
-from skimage.measure import regionprops, label
-from PIL.ImageDraw import Draw
-from PIL.Image import new,  composite
-from PIL import Image
+from skimage.morphology import disk  # pip install scikit-image
 from os.path import basename, isdir, isfile, join, realpath, dirname
 from os import mkdir
 import logging
@@ -24,8 +20,10 @@ def segregate(image, mask, upper_bound=1, lower_bound=0):
     """Find contours, separate them and crop the sub-images
     lower_bound in [0,1] defines the minimum area of a contour
     upper_bound in [0,1] defines the maximum area of a contour"""
-    
-    contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    contours, _ = cv2.findContours(
+        mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE
+    )
     area = np.prod(image.shape)
     contours = np.array([
         contour for contour in contours
@@ -34,9 +32,12 @@ def segregate(image, mask, upper_bound=1, lower_bound=0):
 
     outs = [None for _ in contours]
     for i, _ in enumerate(contours):
-        mask = np.zeros_like(image) # Create mask where white is what we want, black otherwise
-        cv2.drawContours(mask, contours, i, 255, -1) # Draw filled contour in mask
-        out = np.zeros_like(image) # Extract out the object and place into output image
+        # Create mask where white is what we want, black otherwise
+        mask = np.zeros_like(image)
+        # Draw filled contour in mask
+        cv2.drawContours(mask, contours, i, 255, -1)
+        # Extract out the object and place into output image
+        out = np.zeros_like(image)
         out[mask == 255] = image[mask == 255]
 
         # Now crop
@@ -44,7 +45,7 @@ def segregate(image, mask, upper_bound=1, lower_bound=0):
         topy, topx = np.min(y), np.min(x)
         bottomy, bottomx = np.max(y), np.max(x)
         outs[i] = out[topy:bottomy+1, topx:bottomx+1]
-    
+
     return outs
 
 
@@ -83,7 +84,8 @@ def preprocess(
     save_folder=join(PATH, "data", "New"),
     **kwargs
 ):
-    """This function checks that the paths are valid then calls 'preprocess_image'"""
+    """This function checks that the paths are valid then
+     calls 'preprocess_image'"""
     # Check that file and directory are fine
     if not isfile(path):
         logger.error(f"File '{path}' was not found")
@@ -94,7 +96,7 @@ def preprocess(
             mkdir(dirname(save_folder))
         mkdir(save_folder)
         logger.info(f"'{save_folder}' created")
-    
+
     # Preprocess
     image = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     preprocess_image(image, basename(path), save_folder, **kwargs)
