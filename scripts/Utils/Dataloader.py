@@ -8,7 +8,7 @@ import numpy as np
 
 
 class Transforms(object):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args):
 
         self.transforms_list = args[0]
         self.transforms_list.extend([MinMaxNormalization(), tf.ToTensor()])
