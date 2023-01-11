@@ -1,0 +1,1 @@
+{"train_evolution": [[1, {"Loss": 2.129617929458618, "Train Accuracy": 0.05}, {"Valid Loss": 1.5064337849617004, "Valid Accuracy": 0.575}], [2, {"Loss": 1.8885382413864136, "Train Accuracy": 0.55}, {"Valid Loss": 1.2381990551948547, "Valid Accuracy": 0.55}], [3, {"Loss": 0.8438856601715088, "Train Accuracy": 0.475}, {"Valid Loss": 0.8950085937976837, "Valid Accuracy": 0.55}]]}
