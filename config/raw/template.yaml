@@ -1,0 +1,16 @@
+---
+
+LoadPath: data/Raw
+
+folderSave: data/debug
+
+imgTypes:
+  - '/*.tiff'
+  - '/*.tif'
+  - '/*.png'
+  - '/*.jpg'
+  - '/*.jpeg'
+
+inFile : 0
+outFile : 
+step : 1

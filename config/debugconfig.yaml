@@ -1,0 +1,66 @@
+---
+ModelName : debugmodel
+
+PathSave : outputs
+
+CheckpointName : checkpoint.pt
+
+Train :
+  - debug/debug.csv
+#  - debug/train1.csv
+#  - debug/train2.csv
+Test :
+  - debug/debug.csv
+#  - debug/test1.csv
+#  - debug/test2.csv
+
+CheckpointFreq : 5
+
+NEpochs : 3
+
+BatchSize : 20
+
+Seed : 0
+
+Model :
+  Layers :
+    - 3
+    - 4
+    - 6
+    - 3
+  OutClasses : 5
+  Channels : 1
+
+TransformTrain:
+  ToRGB :
+    num_output_channels : 3
+  ColorJitter:
+    brightness : 0.5
+  ToGrayscale :
+    num_output_channels : 1
+  VerticalFlip: 
+    p : 0.5
+  HorizontalFlip : 
+    p : 0.5
+  Rotation : 
+    min : -90
+    max : 90
+  CenterCrop :
+    size : 128
+  Resize :
+    width : 256
+    height : 256
+
+TransformTest:
+  CenterCrop :
+    size : 128
+  Resize :
+    width : 256
+    height : 256
+ 
+Optimizer : 
+  lr : 0.001
+  weight_decay : 0.000001
+
+Scheduler :
+  gamma : 0.95
