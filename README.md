@@ -1,4 +1,4 @@
-# Rock-Cuttings-Characterization
+# RockCuttingsCharacterization
 
 The goal of this project is to guess the rock type from CT-scan cutting with deep learning.
 
@@ -25,13 +25,13 @@ The project layout is as follows:
 
 ## Step-by-step usage: suppose we have a new set of untreated new images
 
-1. Pre-process the files using the ***preprocess.py*** script. You can either call its function *preprocess(path_to_raw_folders, folder_to_save_in)* or run the script:
+1. Pre-process the files using the ***preprocess.py*** script. You can either call its function *preprocess(path_to_raw_folders, folder_to_save_in)* or run the command:
    *python3 scripts/preprocess.py -i data/Raw -o data/New*
 2. Write a \**.csv* file containing the image paths and labels or multiple files if you want to split them into train and validations sets already. The script *make_sets.py* I used could be useful. It should be saved in *config/sets*
 3. Write the \**.yaml* config file, you can use the *config/debugconfig.yaml* file as a template
-4. *Train a model by calling the *train()* function in ***scripts/train.py*** or run the script:*
+4. Train a model by calling the train() function in ****scripts/train.py*** *or run the command*:*
 
    *python3 scripts/train.py config/config_file.yaml*
 
-   The outputs with a results log should appear under **outputs/model_name**
-5. *Test your model with ***scripts/test.py****
+   The outputs with results logs should appear under **outputs/model_name**
+5. Test your model with ****scripts/test.py****
