@@ -7,6 +7,9 @@ import logging
 
 
 """This script is for pre-processing raw images"""
+# TODO preprocessed images were rotated, shifted,
+# cropped and scaled. Those transformations are not
+# yet implemented in the Utils/Preprocessing.py module
 
 
 logger = logging.getLogger()

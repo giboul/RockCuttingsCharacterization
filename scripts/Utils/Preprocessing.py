@@ -8,6 +8,11 @@ import logging
 logger = logging.getLogger()
 
 
+"""Where the preprocessing function for an image is defined"""
+# TODO preprocessed images were rotated, shifted,
+# cropped and scaled. Those transformations are not
+# yet implemented in the Utils/Preprocessing.py module
+
 if __name__ == '__main__':
     PATH = realpath(__file__)
     for _ in range(3):
