@@ -2,7 +2,13 @@
 
 The goal of this project is to guess the rock type from CT-scan cutting with deep learning.
 
-It is based on nfholsen's repository [Rock_Cuttings_Characterisation](https://github.com/nfholsen/Rock_Cuttings_Characterisation) with emphasis on making it easy to use, up to date and running. The PIXE lab at EPFL has the pre-processed images.
+It is based on @nfholsen's repository [Rock_Cuttings_Characterisation](https://github.com/nfholsen/Rock_Cuttings_Characterisation) with emphasis on making it easy to use, up to date and running. The PIXE lab at EPFL has the pre-processed images.
+
+The model is trained on the visible minerals (after having preprocessed the CTscans then the rock cuttings) that look like the following:
+
+<img src="config/pics/ML-DL.png">
+<img src="config/pics/MS-DB.png">
+<img src="config/pics/RV.png">
 
 The project layout is as follows:
 
